@@ -1,0 +1,68 @@
+---
+title: "Commands"
+author: "Mohammad Mahdi Bagheri Asl"
+date: "2023-05-18"
+output: html_document
+---
+#Coursera - R-Specializatoin 
+
+##list installed packages
+```{r}
+installed.packages()
+library()
+```
+
+##update installed packages
+```{r}
+old.packages()
+update.packages()
+install.packages("package-name")
+```
+
+##detach and remove installed packages
+```{r}
+detach("package:ggplot2", unload = T)
+remove.packages()
+```
+
+##list loadde packages
+```{r}
+sessionInfo()
+search()
+```
+
+##help and vignettes
+```{r}
+help(package = "package-name")
+browseVignettes("package-name")
+```
+
+## Create a Git token and push it in Rstudio
+```{r}
+install.packages("usethis")
+library(usethis)
+use_git_config(user.name = "", user.email = "")
+create_github_token()
+install.packages("gitcreds")
+library(gitcreds)
+gitcreds_set()
+```
+
+##push a existing project to GIT (terminal code)
+cd /repo_directory
+git init
+git add .
+git commit -m "initial commit"
+
+**create a git repo**
+git remote add origin git@github.com:git_username/repo_name.git
+git branch -M main
+git push -u origin main
+
+##RMarkdown
+```{r}
+install.packages(c('tinytex', 'rmarkdown'))
+tinytex::install_tinytex()
+```
+
+
